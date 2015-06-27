@@ -1,0 +1,512 @@
+　
+河北信息学竞赛
+　
+　
+——李博杰  主管   肖世康  协办——
+　
+　您的位置：博杰学习网>>学科竞赛>>信息学（内部资料，绝密）
+第三届石家庄二中NOIP模拟赛
+Alyosha佣兵团圣战记模拟赛
+　
+　
+本届模拟赛已于2008年9月14日举行。
+命题人： 卢思达、廖若晨、贾上、魏达联合命题组
+　
+竞赛结果
+姓名得分
+联合命题组350
+李博杰270
+刘延珍140
+石武100
+王暐90
+郑达60
+刘博XUAN60
+（其余略）　
+
+注：孟赫、吴鹏未参赛。
+　
+历届模拟赛统一注意事项
+说明：
+1、     文件名（程序名和输入输出文件名）必须是小写。
+2、     C/C++中函数main()的返回值类型必须是int，程序正常结束时的返回值必须是0。
+3、     统一评测使用的机器配置是CPU 3.06GHz，内存256M，Windows XP Professional SP2，CENA测试器。
+4、     输入输出必须严格按照标准，不得有多余的空格与换行。
+5、     考试时间为3小时，满分400分。
+6、     每题10个测试数据，每个测试数据10分，只有程序得出的答案与标准答案完全相符时才能得分。
+7、     只提交编译后的.exe可执行文件。对未编译或因编译错误而导致的结果不正确，我们将不予重新评测。
+8、     严禁对规定输入输出以外的任何文件进行读写操作，否则取消本题成绩。
+　
+　
+模拟赛试题
+　
+请尊重他人知识产权，版权所有，不得随意复制、更改！
+Alyosha佣兵团圣战记模拟赛
+[背景]
+在Alyosha生活的大陆上有两个种族——龙族和凤族。两个种族虽然偶尔有一点小摩擦，但是总体上还是相处得很和睦。但是有一天，战争的阴云笼罩了整片大陆——凤族对龙族不宣而战。没有准备的龙族被凤族打得连连后退，眼看着就要灭亡了。
+就在这时，伟大的Alyosha和他的伙伴们站了出来，组成了Alyosha佣兵团，开始了为整片大陆上种族的共同发展的斗争。
+这是一场惨烈的战争。后人回忆时总是敬畏地叫它“圣战”，并用崇敬的语气来评价扭转局势的Alyosha佣兵团。下面我们就一起来回顾一下Alyosha佣兵团的圣战历程。
+
+[注意事项]
+本次比赛时间为三个小时，题量为四道，满分400分。
+本次比赛采用文件输入输出的方式。各题目名称和输入输出文件名在各题目中给出。
+
+下面我们就开始和伟大的Alyosha一起出发吧。
+
+1、运输(trans.c/pas/cpp/in/out)
+
+[背景]
+由于龙族在战争初期处于守势，所以Alyosha决定先修建一些防御工事来迟滞凤族的进攻。而一个很显然的事实是：修建坚固的防御工事需要大量的材料，包括石头、木头和一种特殊材料Plastica。而Alyosha这里正好有很多奇妙的魔法材料，这些魔法材料可以在上述三种材料中任意转化。
+不幸的是，Alyosha放材料的地方和军营相距很远。为了解决运输问题，佣兵团中的机械师Sire设计了一种人形运输工具。Sire会在别的地方对这些运输工具进行指挥。如果我们把放材料的地方当作坐标原点建立坐标系的话，那么指挥的方式如下：
+
+（1）运输工具前进的基本方向为北、南、西、东，分别用W,S,A,D表示。同时它还可以向复合方向前进，所谓符合方向就是指东北、西北、东南、西南四个方向，他们的表示由基本方向复合而成，例如东北方向就可以表示为WD或DW，二者是等价的。运输工具只能向这八个方向前进。
+（2）运输工具可以在一个时间段内对材料持续施加10000N的力。
+（3）Sire会在某个时间点对运输工具发出新的指令。接到新指令后，由于物理定律的存在，运输工具会保持原有的运动状态。并且在两个指令之间，材料的受力和材料种类不发生变化。
+（4）由于某些不可预知的原因，Sire在发出的指令会附加一些让魔法材料转化的效果。
+由魔法材料转化来的石头、木头和Plastica的质量分别为50t，5t和1t。当然，材料的变化在运输工具的前进之前就已经完成了。
+（5）材料在最开始时是静止的。
+
+现在Sire想知道在某一个时刻M运输工具的坐标。
+
+
+[输入]
+第1行：一个正整数N，表示Sire共发出了N条指令。
+第2..N+1行：先是一个整数W，表示Sire在时刻W发出了一个指令。接下来给出指令中让运输工具前进的方向和指令中让材料变换成的种类（石头，木头和Plastica分别用S,W,P表示）。方向和种类用 ’.’ 分隔。
+第N+2行：一个正整数M，表示Sire想知道运输工具位置的时间。
+
+[输出]
+两行，第一行为 时刻M时材料位置的横坐标，第二行为其纵坐标，保留 1 位小数，四舍 五
+入。对于实数运算，请采用 double 数据类型。
+
+[样例输入]
+3
+1 W.S
+3 W.P
+4 D.P
+4
+
+[样例输出]
+
+5.0
+16.2
+
+[数据规模]
+对于 100% 的数据， 1<=N<200 ， M<=3000 ，所有的 W<=3000
+
+2、流星雨(meteor.c/pas/cpp/in/out)
+
+[背景]
+凤族的进攻之所以如此猛烈，是因为他们拥有一位厉害的魔法师阿努比斯。为了打乱凤族的进攻，Alyosha决定派他的好友，刺客llxy7前去刺杀阿努比斯。很不幸的是，llxy7在靠近阿努比斯的一瞬间被阿努比斯强大的精神力发现了。阿努比斯用瞬间移动躲开了llxy7的刺杀，并在远处施放了他的绝招——流星雨。
+我们以llxy7最开始所在的位置为原点建立坐标系。llxy7在每一个单位时间内可以向相邻的四个整点（横纵坐标都是整数的点）移动一格，但不能移出第一象限和x,y轴正半轴。同样地，流星也只会落在llxy7的活动范围之内。每一枚流星会引起它落下的点以及周围四个整点的燃烧，且燃烧不会停止。显然，llxy7不能处于这些着火的点。
+阿努比斯自信地认为没有人可以在他的流星雨下生还，而llxy7不这么看，他认为自己还是有机会生还的。实在不行，他还有一件宝物——海洋之心，它可以让使用者重生。但是除非被迫，llxy7不想使用海洋之心，毕竟这件宝物太珍贵了。逃出来之后，llxy7会趁着阿努比斯魔法力枯竭而且警惕放松的时候再次进行刺杀，这时的刺杀是一定可以成功的。
+而一个最关键的问题是：llxy7最少需要多少时间可以到达一个不能燃烧的点?
+
+[输入]
+第1行：一个正整数M(1<=M<=50000)，表示阿努比斯的流星雨魔法里包含的流星数目。
+第2..M+1行：包含三个正整数X，Y，T（0<=X,Y<=300，0<=T<=1000），分别表示每一颗流星落到地面上的坐标以及这颗流星落到地面的时间。
+
+[输出]
+一行，包含一个整数T，表示llxy7逃脱需要的最短时间。如果他不能逃脱，输出-1。
+
+[样例输入]
+4
+0 0 2
+2 1 2
+1 1 2
+0 3 5
+
+[样例输出]
+5
+
+3、列队(line.c/pas/cpp/in/out)
+
+[背景]
+在llxy7刺杀了阿努比斯后，凤族的进攻被迟滞了。龙族的军队在Alyosha的带领下进行了反攻，并渐渐收回了失地。在若干年的僵持之后，大决战终于到来了。
+高瞻远瞩的Alyosha早早地预见了这场决战的到来，为此，他早在几年以前就授意军师JosephWei开始进行准备。准备的一项内容就是要训练一些绝对的精锐部队。
+JosephWei要训练的兵种有三种，我们将他们编号为1~3。在第一次列队时，他们的队形很混乱，也就是说，1~3这三种士兵在队列中是任意排列的。由于这些新兵根本不懂得如何列队，JosephWei无奈之下只能更改他们的兵种，使这些士兵的编号成为一个不升或不降的序列。比如编号序列1 3 2 1 2 3可以被变成3 2 2 1 1 1或 1 1 1 2 2 2或1 1 1 2 3 3。
+现在JosephWei想知道他如何改变这些士兵的兵种才能让调整的次数最少。
+
+[输入]
+第1行：一个正整数N（1<=N<=30000），表示JosephWei要训练的士兵数。
+第2..N+1行：每行一个1~3之间的正整数，表示这些士兵第一次列队时的编号。
+
+[输出]
+一行。一个正整数M，表示JosephWei需要调整的最小次数。
+
+[样例输入]
+5
+1
+3
+2
+1
+1
+
+[样例输出]
+1
+
+4、魔法阵(magic.c/pas/cpp/in/out)
+[背景]
+在Alyosha的带领下，龙族赢得了战争。但是战争带来的永远是创伤。
+Alyosha的伟大之处不在于他过人的军事才能，而是在于他在战争后为这片大陆重新带来了生机。
+Alyosha为了实现他的伟大愿望，布置了一个上古时期流传下来的魔法阵。这个魔法阵中有N颗魔法石，方便起见，将他们编号1~N，每块魔法石都有一个法力值，为1~10之间（含1和10）的正整数。某些魔法石之间用一些魔纹连接，连接是双向的，魔纹有一定的长度。魔法石之间可以通过其他魔法石和这些魔法石之间的魔纹连通，一个连通的值即是这些魔纹的长度和。两块魔法石之间的距离就是它们之间所有连通的值中最小的那个。每块魔法石最多和10块魔法石直接用魔纹连接。当Alyosha将自己的魔法力注入阵中后，魔法阵就可以与上古时期的生命之神的法力沟通，给大陆带来生命力。
+为了更好地了解魔法阵的结构，我们做出了如下定义：
+魔法石i对魔法石j敏感，当且仅当不存在魔法石k（k可能与i相等）到i的距离比j到i的距离短且k的魔法值比j的魔法值高。这时（i，j）叫做一个敏感的魔法石对。
+显然，i对j敏感并不表示j对i敏感。也就是说（i，j）与（j，i）是不同的。魔法石i对自己对自己是不敏感的。
+现在，给出这个魔法阵的具体情况，请你求出所有敏感的魔法石对的数目。
+[输入]
+第一行：N（N<2000）和M，表示魔法石数目和魔纹数目。
+第2..N+1行：每行一个正整数rank(i)，表示魔法石i的法力值。
+第N+2～N+M+1 行：每行三个正整数i，j，l(i,j)，表示i与j之间有一道长度为l(i,j)的魔纹。
+
+[输出]
+一行，表示敏感的魔法石对的数目。数据保证结果的最大值是3*n。
+
+[样例输入]
+6 5
+4
+2
+3
+2
+2
+4
+1 2 1
+2 3 1
+3 4 1
+4 5 1
+5 6 1
+
+[样例输出]
+14
+　
+　
+标程源代码
+　
+请尊重他人知识产权，版权所有，不得随意复制、更改！
+trans.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+struct key
+{
+int dx;
+int dy;
+int time;
+int mass;
+};
+int cmp(const void* x, const void* y)
+{
+return ((struct key*)x) -> time - ((struct key*)y) -> time;
+}
+int mass(char x)
+{
+switch(x)
+{
+case 'P': return 1;
+case 'W': return 5;
+case 'S': return 50;
+}
+}
+int main()
+{
+freopen("trans.in", "r", stdin);
+freopen("trans.out", "w", stdout);
+struct key dat[3024];
+double x;
+double y;
+double vx = 0;
+double vy = 0;
+double vtx;
+double vty;
+int run_time;
+int time;
+int n;
+int i;
+char direct;
+char sub;
+
+scanf("%d", &n);
+for(i=0; i<n; i++)
+{
+scanf("%d ", &(dat[i].time));
+scanf("%c", &direct);
+while(direct!='.')
+{
+switch(direct)
+{
+case 'W': dat[i].dy += 10;
+break;
+case 'S': dat[i].dy -= 10;
+break;
+case 'A': dat[i].dx -= 10;
+break;
+case 'D': dat[i].dx += 10;
+break;
+}
+scanf("%c", &direct);
+}
+scanf("%c", &sub);
+dat[i].mass = mass(sub);
+}
+scanf("%d", &time);
+dat[n].time = time + 1;
+dat[n].dx = 0;
+dat[n].dy = 0;
+dat[n].mass = 0;
+n++;
+qsort((void*)dat, n, sizeof(dat[0]), cmp);
+
+// for(i=0; i<n; i++) printf("%d %d %d %d\n", dat[i].time, dat[i].dx, dat[i].dy, dat[i].mass);
+
+for(i=0; i<n - 1; i++)
+{
+run_time = dat[i + 1].time - dat[i].time;
+vtx = vx + 1.0 * dat[i].dx / dat[i].mass * run_time;
+vty = vy + 1.0 * dat[i].dy / dat[i].mass * run_time;
+x += (vtx + vx) / 2 * run_time;
+y += (vty + vy) / 2 * run_time;
+vx = vtx;
+vy = vty;
+}
+
+printf("%0.1lf\n%0.1lf\n", x, y);
+return 0;
+}
+　
+meteor.c
+#include<stdio.h>
+#include<stdlib.h>
+#define N 50010
+#define L 310
+struct a
+{
+int x,y,t;
+}a[N];
+int r=L,c=L;
+int x[5]={-1,0,1,0,0},y[5]={0,1,0,-1,0};
+int g[L][L];
+int b[L][L]={0};
+int steps[L][L]={0};
+int crash[L][L]={0};
+int n;
+int ans=2147483647;
+
+void Qsort(int i,int j)
+{
+int i1=i,j1=j;
+struct a tmp=a[i];
+while(i<j)
+{
+while(i<j && a[j].t>=tmp.t) j--;
+if(i<j)
+{
+a[i]=a[j];
+i++;
+}
+while(i<j && a[i].t<=tmp.t) i++;
+if(i<j)
+{
+a[j]=a[i];
+j--;
+}
+}
+a[i]=tmp;
+if(i1<i-1) Qsort(i1,i-1);
+if(j+1<j1) Qsort(j+1,j1);
+}
+
+void init()
+{
+int i;
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+scanf("%d%d%d",&a[i].x,&a[i].y,&a[i].t);
+}
+Qsort(0,n-1);
+}
+
+int in_range(int row,int col)
+{
+return row>-1 && row<L && col>-1 && col<L;
+}
+
+void strike(int t)
+{
+int i;
+for(i=0;i<5;i++)
+{
+if(in_range(a[t].x+x[i],a[t].y+y[i]))
+{
+crash[a[t].x+x[i]][a[t].y+y[i]]=1;
+}
+}
+}
+
+int judge(int row,int col)
+{
+return in_range(row,col) && !b[row][col] && !crash[row][col];
+}
+
+void solve()
+{
+int p=0;
+int i;
+int q[2*N]={0};
+int head=0,tail=1;
+int row,col;
+int pre=-1;
+b[0][0]=1;
+while(head<tail)
+{
+row=q[head]/L;
+col=q[head]%L;
+head++;
+if(steps[row][col]>pre)
+{
+pre=steps[row][col];
+while(p<n && a[p].t==pre)
+{
+strike(p);
+p++;
+}
+}
+if(crash[row][col])
+{
+continue;
+}
+for(i=0;i<4;i++)
+{
+if(judge(row+x[i],col+y[i]))
+{
+b[row+x[i]][col+y[i]]=1;
+steps[row+x[i]][col+y[i]]=steps[row][col]+1;
+q[tail]=(row+x[i])*L+col+y[i];
+tail++;
+}
+}
+}
+while(p<n)
+{
+strike(p);
+p++;
+}
+}
+
+void print()
+{
+int mark=0;
+int i,j;
+for(i=0;i<L;i++)
+{
+for(j=0;j<L;j++)
+{
+if(b[i][j] && !crash[i][j])
+{
+mark=1;
+if(steps[i][j]<ans)
+{
+ans=steps[i][j];
+}
+}
+}
+}
+if(!mark)
+{
+ans=-1;
+}
+printf("%d\n",ans);
+}
+
+int main()
+{
+freopen("meteor.in","r",stdin);
+freopen("meteor.out","w",stdout);
+init();
+solve();
+print();
+return 0;
+}
+
+line.c
+#include<stdio.h>
+#include<stdlib.h>
+#define N 30010
+int pos[N];
+int dp[N][4]={0};
+int n;
+int ans;
+
+int min(int a,int b)
+{
+return a<b?a:b;
+}
+
+void init()
+{
+int i;
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+scanf("%d",&pos[i]);
+dp[i][1]=dp[i][2]=dp[i][3]=2147483647;
+}
+}
+
+void solve()
+{
+int i,j,k;
+int min1,min2;
+for(i=1;i<=n;i++)
+{
+for(j=1;j<=3;j++)
+{
+for(k=1;k<=j;k++)
+{
+if(dp[i-1][k]+(pos[i]!=j)<dp[i][j])
+{
+dp[i][j]=dp[i-1][k]+(pos[i]!=j);
+}
+}
+}
+}
+min1=min(dp[n][1],min(dp[n][2],dp[n][3]));
+
+for(i=n;i>=1;i--)
+{
+for(j=1;j<=3;j++)
+{
+dp[i][j]=2147483647;
+}
+for(j=1;j<=3;j++)
+{
+for(k=1;k<=j;k++)
+{
+if(dp[i+1][k]+(pos[i]!=j)<dp[i][j])
+{
+dp[i][j]=dp[i+1][k]+(pos[i]!=j);
+}
+}
+}
+}
+min2=min(dp[1][1],min(dp[1][2],dp[1][3]));
+ans=min(min1,min2);
+}
+
+int main()
+{
+freopen("line.in","r",stdin);
+freopen("line.out","w",stdout);
+init();
+solve();
+printf("%d\n",ans);
+return 0;
+}
+
+　
+
+　　
+Copyright （C） 2008 石家庄二中校友会 博杰学习网
+　
+
+　 
+　
+ 

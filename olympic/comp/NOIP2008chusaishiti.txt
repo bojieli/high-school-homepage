@@ -1,0 +1,313 @@
+NOIP2008专题
+
+NOIP2008之初赛：试题 答案 成绩
+NOIP2008之复赛： 解题报告 标准程序 测试数据 河北成绩 全国复测成绩
+NOIP2008之体验：专题首页 竞赛不是无情物 告别信息学世界 回顾四年风雨 程序人生
+　
+　您的位置：博杰学习网>>学科竞赛>>信息学（内部资料，绝密）
+　　
+第十四届全国青少年信息学奥林匹克联赛初赛试题
+（ 提高组 Pascal语言 二小时完成 ）
+●● 全部试题答案均要求写在答卷纸上，写在试卷纸上一律无效 ●●
+ 
+一、单项选择题（共10题，每题1.5分，共计15分。每题有且仅有一个正确答案）。
+ 
+1．在以下各项中，（   C   ）不是操作系统软件。
+A．Solaris     B．Linux       C．Sybase      D．Windows Vista     E．Symbian
+ 
+2．微型计算机中，控制器的基本功能是（  A  ）。
+A．控制机器的各个部件协调工作    B．实现算数运算与逻辑运算  C．存储各种控制信息
+D．获取外部信息                   E．存放程序和数据
+ 
+3．设字符串S=“Olympic”，S的非空字串的数目是（    ）。
+A．29            B．28             C．16             D．17            E．7
+ 
+4．完全二叉树有2*N-1的结点，则它的叶子结点数目是（ C   ）。
+A．N-1           B．2*N            C．N              D．2N-1          E．N/2
+ 
+5．将数组{8，23，4，16，77，-5，53，100}中元素从大到小按顺序排序，每次可以交换任意两个元素，最少要交换（   B ）次。
+A．4             B．5              C．6               D．7            E．8
+ 
+6．设栈S的初始状态为空，元素a，b，c，d，e，f依次入栈，出栈顺序为b，d，c，f，e，a那么栈容量至少应该是（  D   ）。
+A．6             B．5              C．4               D．3            E．2
+ 
+7．与十进制数28.5625相等的四进制数是（  D  ）
+A．123.21        B．131.22          C．130.22           D．130.21      E．130.20
+ 
+8．递归过程和函数调用时，处理参数和返回地址，通常使用一种称为（ E  ）的数据结构。
+A．队列         B．多维数组        C．线性表          D．链表       E．栈
+ 
+9．TCP/IP 是一组构成互联网基础的网络协议，字面上包括两组协议：传输控制协议（TCP）和网际互联协议（IP）。TCP/IP协议把Internet网络系统描述成具有4个层次功能的网络模型，其中提供源节点和目的节点之间的信息传输服务，包括寻址和路由器选择等功能的是（B）。
+A．链路层       B．网络层          C．传输层          D．应用层     E．会话层
+ 
+10．对有序数组{5,13,19,21,37,56,64,75,88,92,100}进行二分查找，等概率情况下，查找成功的平均查找长度（平均比较次数）是（B）。
+A．35/11        B．34/11            C．33/11            D．32/11      E．34/10
+ 
+二、不定项选择题（共10题，每题1.5分，共计15分。每题正确答案的个数大于或等于1。多选或少选均不得分）。
+ 
+11．下列关于图灵的说法正确的有（ ABD     ）。
+A．图灵奖是美国计算机协会与1966年设立的，专门鼓励那些对计算机做出重要贡献的个人
+B．图灵奖有“计算机界诺贝尔奖”之称。 
+C．迄今为止，还没有华裔计算机科学家获此殊荣。
+D．图灵奖的名称取自计算机科学先驱、英国科学家阿兰·图灵。
+ 
+12．计算机在工作过程中，若突然停电，（     AC   ）中不会丢失信息不会丢失。
+A．硬盘            B．CPU          C．ROM          D．RAM
+ 
+13．若A=True，B=False，C=True，D=False，以下逻辑运算表达式真的有（      ）。
+A．（A∧B）V（C∧DV?A）                 B．（（?A∧B）VC）∧?B 
+C．（BVCVD）VD∧A                       D．A∧（DV?C）∧B
+ 
+14．Web2.0是近年来互联网热门概念之一，其核心是互动与分享。下列网站中，（    ）是典型的Web2.0的应用。
+A．Sina            B．Flickr          C．Yahoo         D．Google
+ 
+15．(2008)10+  (5B)16 的结果是（）。
+A．（833）16           B．（2099）10       C．（4063）8      D．（100001100011）2
+ 
+16．二叉树T，已知其先序遍历是1 2 4 3 5 7 6（数字为节点编号，以下同），后序遍历是4 2 7 5 6 3 1，则该二叉树的中根遍历是（      ）
+A．4 2 1 7 5 3 6  B．2 4 1 7 5 3 6  C．4 2 1 7 5 6 4  D．2 4 1 5 7 3 6
+17．面向对象的程序设计（Object-Oriented Programming）是一种程序设计的方法论，它将对象作为程序设计的基本单元，将数据和程序封装在对象中，以提高软件的重用性、灵活性、和扩展性。下面关于面向对象的程序设计说法中正确的是（     ）。
+A．面向对象的程序设计方法通常采用自顶向下的设计方法进行设计。
+B．面向对象的程序设计方法具有继承性（inheritance）、封装性（encapsulation）、多态性（polymorphism）等几大特点。
+C．支持面向对象特性称为面向对象的编程语言，目前较为流行的有C++，JAVA，C#等。
+D．面向对象的程序设计的雏形来自于Simula语言，后来在SmallTalk语言的完善和标准化的过程中得到更多的扩展和对以前的思想的重新注解。至今，SmallTalk语言仍然被视为面向对象的基础。
+ 
+18．设T是一棵有n个定点的树，以下说法正确的是（       ）。
+A．T是联通的，无环的                       B．T是联通的，有n-1条边
+C．T是无环的，有n-1条边                   D．以上都不对
+ 
+19．NOIP竞赛推荐使用的语言环境有（          ）。
+A．Dev-C++          B．Visual C++           C．Free Pascal            D．Lazarus
+ 
+20．在下列防火墙（Firewall）的说法中，正确的有（      ）。
+A．防火墙是一项协助确保信息安全的设备，其会依照特定的规则，允许或是限制数据通过
+B．防火墙可能是一台专属硬件或是安装在一般硬件上的一套软件
+C．网络层防火墙可以视为一种IP数据包过滤器，只允许符合特定规定的数据包通过，其余的一概禁止穿越防火墙
+D．应用层防火墙是在TCP/IP的“应用层”上工作，可以拦截进出某应用程序的所有数据包
+ 
+三、问题求解（共2题，每题5分，共计10分）
+1．有6个城市，任何两个城市之间有一条道路连接，6个城市之间两两之间的距离如下表表示，则城市1到城市6的最短距离为____________。
+ 城市1城市2城市3城市4城市5城市6
+城市102311215
+城市22025312
+城市3320365
+城市4153079
+城市51236702
+城市615125920
+
+ 
+2．书架上有21本书，编号从1 到 21 从中选4 本，其中每两本的编号都不相邻的选法一共有___________________种。
+ 
+四、阅读程序写结果（共4题，每题8分，共计32分）。
+1．var
+     i,a,b,c,d:integer;
+     f:array[0..3] of integer;
+begin
+        for i:=0 to 3 do
+                read(f[i]);
+        a:=f[0]+f[1]+f[2]+f[3];
+        a:=a div f[0];
+        b:=f[0]+f[2]+f[3];
+        c:=(b*f[1]+a) div f[2];
+        d:=f[(b div c) mod 4];
+        if (f[(a+b+c+d) mod 4]>f[2]) then
+        begin
+                a:=a+b;
+                writeln(a)
+        end
+else
+begin
+        c:=c+d;
+        writeln(c);
+end;
+end.
+ 
+输入： 9  19  29  39
+输出：_______________________________
+ 
+2．procedure foo(a,b,c:integer);
+  begin
+    if a>b then foo(c,a,b)
+else
+   writeln(a,',',b,',',c)
+end;
+var a,b,c:integer;
+begin
+  readln(a,b,c);
+  foo(a,b,c);
+end.
+ 
+输入：2 1 3
+输出：_________________
+ 
+3．procedure f(a,b,c:integer);
+begin
+  write(a,b,c,'/');
+  if (a=3)and(b=2)and(c=1) then exit;
+  if (b<c) then f(a,c,b)
+else
+  if a<b then
+   if a<c then f(c,a,b) else f(b,c,a);
+end;
+var a,b,c:integer;
+begin
+readln(a,b,c);
+f(a,b,c);
+end.
+ 
+输入：1 3 2
+输出：____________________
+ 
+4．var
+   s:string;
+   i,j,len,k:integer;
+begin
+readln(s);
+len:=length(s);
+for i:=1 to len do
+  if (ord(s[i])>=ord('A')) and (ord(s[i])<=ord('Z')) then
+  s:=chr(ord(s[i])-ord('A')+ord('a'));
+for i:=1 to len do
+if (ord(s[i])<ord('X')) then s:=chr(ord(s[i])+3)
+   else
+   s:=chr(ord(s[i])-23);
+write(s);
+write('/');
+for j:=1 to 3 do
+begin
+    i:=1;
+  while i<=len-j do
+  begin
+s[i]:=s[i+j];
+i:=i+j;
+  end;
+end;
+writeln(s);
+end.
+ 
+输入：ABCDEFGuvwxyz
+输出：________________________________
+ 
+五．完善程序（前6空，每空3分，后5空，每空2分，共28分）。
+1．（找第k大的数）给定一个长度为1000000的无序正整数序列，以及另一个数n(1<=n<=1000000)，接下来以类似快速排序的方法找到序列中第n大的数（关于第n大的数：例如序列{1，2，3，4，5，6}中第3大的数是4）
+ 
+Var  a:array[1..1000000] of integer;
+n,m,ans:integer;
+procedure swap(var a,b:integer);
+var t:integer;
+begin
+  if  (a<>b) then begin
+t:=a; a:=b; b:=t;
+end;
+end;
+Function FindKth(left,right,n:integer):integer;
+Var tmp,value,i,j:integer;
+begin
+  if left=right then exit(left);
+  tmp:=random(right-left)+left;
+  swap(a[tmp],a[left]);
+  value:=____①_____
+  i:=left;  j:=right;
+while i<j do
+  begin
+   while (i<j) and (________②______) do dec(j);
+   if i<j then begin
+    a:=a[j];inc(i);
+   end else break;
+   while (i<j) and (___③___) do inc(i);
+   if i<j then begin
+    a[j]:=a[i]; dec(j);
+  end else break;
+  end;
+  ____④_____
+  if i<n then begin inc(i); exit(FindKth(_____⑤_____));end;
+  if i>n then begin dec(j); exit(______⑥________);end;
+  exit(i);
+end;
+ 
+var i:integer;
+begin
+  randomize;
+   ans:=-1;
+m:=5;
+for i:=1 to m do
+  read(a[i]);
+read(n);
+ans:=FindKth(1,m,n);
+writeln(a[ans]);
+end.
+ 
+2．（矩阵中的数字）有一个n*n（1≤n≤5000)的矩阵a，对于1≤i<n, 1≤j≤n, a[i,j]<a[i+1,j]  a[j,i]<a[j,i+1]。即矩阵中左右相邻的两个元素，右边的元素一定比左边的大。上下相邻的两个元素，下面的元素一定比上面的大。给定矩阵a中的一个数字k，找出k所在的行列（注意：输入数据保证矩阵中的数各不相同）。
+
+var
+    n,k,answerx,answery:integer;
+    a:array[1..5000,1..5000] of integer;
+Procedure FindKPosition;
+Var I,j:integer;
+Begin
+       i:=n; j:=n;
+       while j>0 do begin
+                if a[n,j]<k then break;
+                dec(j);
+        end;
+        ______①_________
+        while a[i,j]<>k do
+        begin
+                while (___②_____) and (i>1) do dec(i);
+                while (___③_____) and (j<=n) do inc(j);
+        end;
+        _______④________
+        _______⑤________
+end;
+ 
+var i,j:integer;
+begin
+        read(n);
+        for i:=1 to n do
+                for j:=1 to n do
+                        read(a[i,j]);
+                read(k);
+                FindKPosition;
+        writeln(answerx,' ',answery);
+end. NOIP2008年提高组（Pascal语言）参考答案与评分标准 
+
+一、单项选择题：（每题1.5分） 
+1. C 2. A 3. B 4. C 5. B 
+6. D 7. D 8. E 9. B 10. C 
+二、 不定项选择题 （共10题，每题1.5分，共计15分。每题正确答案的个数大于或等于1。多选或少选均不得分）。 
+11. ABD 12. AC 13. BC 14. B 15. ABC 
+16. ABD 17. BCD 18. ABC 19. ACD 20. ABCD 
+三、问题求解：（共2题，每题5分，共计10分） 
+1．7 
+2．3060 
+四、阅读程序写结果（共4题，每题8分，共计32分） 
+1. 23 （信心题） 
+2. 1,3,2 (简单递归) 
+3. 132/213/231/312/321/ （全排列） 
+4. defghijxyzabc/hfizxjaybcccc （字符串替换） 
+五．完善程序 (前6空，每空3分，后5空，每空2分，共28分) 
+（说明：以下各程序填空可能还有一些等价的写法，各省可请本省专家审定和上机验证，不一定上报科学委员会审查） 
+1. ① a[left] 
+② a[j] < value (或a[j] <= value) 
+③ a[i] > value （或a[i] >= value） 
+④ a[i] := value; 
+⑤ i,right,n 
+⑥ FindKth(left, i, n) 
+
+2. ① inc(j); (或者j := j+1;) 
+② a[i,j] > k 
+③ a[i,j] < k 
+④ answerx := i; 
+⑤ answery := j; 
+ 
+　
+　
+　Copyright （C） 2008 石家庄二中校友会 博杰学习网
+
+d
+　 
+　
+ 
+　
+　
+　

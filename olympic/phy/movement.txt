@@ -1,0 +1,9 @@
+见高等教育出版社《微积分》第二版上册P294例8“自由振动问题” 
+方程：(d x)*(d x)/(d t*t)+k*k*x=0  
+通解：x(t)=c1*cos(kt)+c2*sin(kt)  
+特解：x(t)=x0*cos(kt)+v0/k*sin(kt) 
+令：x0=Asin(sita)  
+结论：Asin(kt+sita)  
+振幅为A，初相为sita，周期为T=2pi/k，角频率为k。  
+其中k为系统的固有频率。  
+　

@@ -1,0 +1,57 @@
+From the harmony, For the harmony.  为了社会和谐
+ 博杰学习网》和谐信息港》站长文章
+ Contents  科技博览  站长文章  永远的十七  心灵碰撞  专题关注  Homepage
+
+科学之境
+
+
+
+    Before going any further, let’s digress a minute to discuss different “levels”
+of questions that can be asked in books about mathematics:
+    Level 1. Given an explicit object x and an explicit property P(x), prove that
+P(x) is true. For example, “Prove that 1x1 = 3.” Here the problem involves
+finding a proof of some purported fact.
+    Level 2. Given an explicit set X and an explicit property P(x), prove that
+P(x) is true for all x E X. For example, “Prove that 1x1 < x for all real x.”
+Again the problem involves finding a proof, but the proof this time must be
+general. We’re doing algebra, not just arithmetic.
+    Level 3. Given an explicit set X and an explicit property P(x), prove or
+disprove that P(x) is true for all x E X. For example, “Prove or disprove
+that [ml = [J;;] for all real x 2 0.” Here there’s an additional level 
+of uncertainty; the outcome might go either way. This is closer to the real Same as
+situation a mathematician constantly faces: Assertions that get into books 
+tend to be true, but new things have to be looked at with a jaundiced eye. If
+the statement is false, our job is to find a counterexample. If the statement
+is true, we must find a proof as in level 2.
+    Level 4. Given an explicit set X and an explicit property P(x), find a necessary
+and suficient condition Q(x) that P(x) is true. For example, “Find a
+necessary and sufficient condition that 1x1 3 [xl .” The problem is to find Q
+such that P(x) M Q(x). Of course, there’s always a trivial answer; we can
+take Q(x) = P(x). But the implied requirement is to find a condition that’s as
+simple as possible. Creativity is required to discover a simple condition that
+will work. (For example, in this case, “lx] 3 [xl H x is an integer.“) The 
+extra element of discovery needed to find Q(x) makes this sort of problem
+more difficult, but it’s more typical of what mathematicians must do in the
+“real world!’ Finally, of course, a proof must be given that P(x) is true if and
+only if Q(x) is true.
+    Level 5. Given an explicit set X, find an interesting property P(x) of its
+elements. Now we’re in the scary domain of pure research, where students
+might think that total chaos reigns. This is real mathematics. Authors of
+textbooks rarely dare to ask level 5 questions.
+    End of digression.
+-- From Concrete Mathematics: A Foundation For Computer Science
+    从数学与信息学名著《具体数学：计算机科学基础》中我们看到，数学的研究分五个境界：
+    1.验证特例，这也是我们发现问题的方法手段。
+    2.证明性质，这是我们考试时通常遇到的题型。
+    3.证明或否定命题，例如数学研究中的哥德巴赫猜想。在考试中，通常这样的问题都是要求“证明”，但在数学研究中并非如此，很多“看起来正确”的命题事实上存在反例，而这个反例又不是容易构造的。
+    4.给出命题的充要条件，有时这是困难的。但在数学竞赛中，尤其是高档次的竞赛，这样的试题并不少见。例如，求最值类问题就是这个档次：首先证明最值可以取到，构造出一个例子；然后证明最值以外的不可取到，这通常需要反证法；然后，还需要说明最值以内的都可以取到，一般是从等号成立时推出。显然，这样的问题要比简单的“证明题”困难得多。这也接近数学研究的范畴了。
+    5.对一个给定的数学模型，发现、研究其有趣的性质。数学研究的真正精髓在此，数学竞赛的命题人其实也在从事这样的工作。至少笔者的体会是这样的：每次构造一个看起来“和谐”的数学模型，发现、研究其有趣的性质，进行变形、构造，最后成为一道试题。这样的过程总是艰苦的，命过竞赛试题的读者，也许有同样的感受。
+    数学如此，科学何尝例外？科学研究，从验证前人已有的成果，到自主发现崭新的成果，需要一个漫长的过程，需要付出艰辛的努力，还需要极高的创造力和灵感。走入科学之境，我们发现一片崭新的空间：那里纤尘不染，需要开路人的探索，才能走出新的通路，观赏新的风景。
+    提升科学之境，不是一蹴而就的事情，需要大量的学习与练习。很多人认为当前学习的文化科目“未来没有用”，那是志向浅近、胸无大志的人的想法，也是多数人无法成为牛顿、爱因斯坦的原因。甚至有人叫嚣，搞科学就是做统治者的奴隶。那么我们不妨问，科学无国界，科研成果属于自然；搞科研的人，实质上是自然界的“直属奴隶”；但统治者何尝不属于自然之子？于是乎，科学与政治不可混为一谈，更没有所谓“科学服务于政治”之说。真正的科学，需要坚实的基础；而坚实的基础，又要以辛勤的劳动作为付出。宝剑锋从磨砺出，梅花香自苦寒来。为登世界巅，十年磨一剑；居高以望远，百岁功可羡。
+    科学之境，值得我们回味思考。走入科学之境，从考试中的前三个境界迈向科学中的终极之境，是一条漫长的征程。但一旦走入科学研究的巅峰，你会有一览众山小的感觉；科学也不再枯燥无味，抑或神秘莫测，心中洋溢的是傲然自得的神气，更是对自然的膜拜与对科学的探求。
+    提升科学之境，品味科学之趣，何乐而不为？
+　
+
+版权所有 2009-02-13 博杰学习网
+
+ 

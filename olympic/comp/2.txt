@@ -1,0 +1,576 @@
+　
+河北信息学竞赛
+　
+　
+——李博杰  主管   肖世康  协办——
+　
+　您的位置：博杰学习网>>学科竞赛>>信息学（内部资料，绝密）
+第二届石家庄二中NOIP模拟赛
+羽毛书模拟赛
+　
+本届模拟赛已于6月1日举行。
+命题人：郑达（羽毛书）
+　
+竞赛结果
+姓名得分
+郑达400
+廖若晨320
+贾上310
+吴鹏300
+李博杰230
+孟赫190
+马云飞160
+刘延珍130
+魏达100
+孟阳20
+ww（姓名不详）--
+
+注：卢思达、石武、吴鹏未参赛。吴鹏赛后补测。
+　
+历届模拟赛统一注意事项
+说明：
+1、     文件名（程序名和输入输出文件名）必须是小写。
+2、     C/C++中函数main()的返回值类型必须是int，程序正常结束时的返回值必须是0。
+3、     统一评测使用的机器配置是CPU 3.06GHz，内存256M，Windows XP Professional SP2，CENA测试器。
+4、     输入输出必须严格按照标准，不得有多余的空格与换行。
+5、     考试时间为3小时，满分400分。
+6、     每题10个测试数据，每个测试数据10分，只有程序得出的答案与标准答案完全相符时才能得分。
+7、     只提交编译后的.exe可执行文件。对未编译或因编译错误而导致的结果不正确，我们将不予重新评测。
+8、     严禁对规定输入输出以外的任何文件进行读写操作，否则取消本题成绩。
+　
+本届模拟赛注意：第一题表述不清（问不问都要算），第三题注意特殊情况（只有串联或只有并联），第四题答案有误！
+红色部分为第一题错误所在，无论是0或1，都可能出现询问most，致使李博杰、孟赫各损失90分！
+强烈谴责第一题表达严重错误，第四题答案错误！
+希望出题人认真审查题目，今后的模拟赛不要再出类似问题！
+　
+　
+模拟赛试题
+　
+请尊重他人知识产权，版权所有，不得随意复制、更改！
+　
+石家庄市第二中学奥林匹克信息学模拟赛
+ 
+By最弱的羽毛书
+ 
+ 
+题目一览
+试题名称电脑选择飞翔的羽毛笔记本们的并联和串连充分运用盗取的精简版war敌军情报
+代号chooseflylinewar
+输入文件choose.infly.inline.inwar.in
+输出文件choose.outfly.outline.outwar.out
+时限1秒1秒1秒1秒
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notice:
+注意事项见李博杰模拟题。
+ 
+ 
+ 
+ 
+ 
+电脑选择
+(choose.pas/c/cpp)
+ 
+【问题描述】
+YuMS打算开一个oj，他有一个小电脑，100美元让贫困学生用上电脑计划的那种，虽然防摔易带，但做服务器很不适合。
+YuMS不想买一个专业服务器，他有一个这样的想法：再买几台强劲的笔记本，配合无线路由组一个无线服务器组。这样既能省钱，又能在枕上、厕上无线上网。
+于是YuMS携巨款跑到了太和电子城。
+太和电子城门口有一个采购机，可以方便买主先查到自己要买的东西，再去相应的地方买所需的东西。YuMS没见过这么先进的东西，不太会高级搜索，只能输入“笔记本”，然后手动翻页，找自己所需。太和电子城太大了，与笔记本有关的东西那么多！保安看他找个没完，后面排了那么长的队，就与YuMS商量将搜索结果通过蓝牙发到了他的无敌手机里。接着他通过洲际蓝牙将数据发给了你，让你帮他挑选一个最合适的电脑。
+每台电脑都有自己的性能指数，用一个整数来表示。当然还有价格，也是一个整数(万)。YuMS非常性急，在你翻看搜索结果的时候他就会不时给你打电话，询问你截止到你翻到的地方他可以买到的最好的电脑一台电脑的性能指数。有时候他还要问截止到你翻到的地方可以买到的笔记本们的最大性能指数，因为YuMS懒，所以有时候他就不提这件事了。
+【输入文件】
+输入文件共m行，第1行为YuMS是否询问能买到的笔记本们的最大性能指数A。A为1表示问，0表示不问。第二行为YuMS带的钱数T（正整数）万。第3-m行为操作序列，see 5 6表示你又看到了一个价格为5万性能为6的笔记本，ask表示询问当前可以买到的最好的电脑的性能指数，most表示询问当前可以买到的电脑们的最大性能指数。
+【输出文件】
+输出文件与输入文件有关，当输入文件出现ask或most时，输出文件需输出对应的性能指数。每个数一行。
+【输入样例1】
+0
+2
+see 1 10
+see 2 5
+ask
+see 1 20
+ask
+【输出样例1】
+10
+20
+【输入样例2】
+1
+4
+see 3 10
+ask
+most
+see 4 11
+ask
+most
+see 1 2
+ask
+most
+【输出样例2】
+10
+10
+11
+11
+11
+12
+【范围说明】
+对于30%的数据A=0;
+对于30%的数据m<=1000;
+对于100%的数据，m<=10000;0<T<=100;价格为正整数(万)
+飞翔的羽毛
+(fly.pas/c/cpp)
+【问题描述】
+这天YuMS在厕所半天没有出来，原来是他用他新买的最牛的一台笔记本在厕所编了个小游戏，游戏是图形界面，其中有一大堆羽毛，有黑色有白色有绿色有红色……游戏任务是让你在这堆羽毛中找到每种颜色组成的面积最大的颜色相同的矩形。
+【输入文件】
+输入文件第1行有一个整数k，表示矩阵中共出现了k种颜色。第2行包含两个整数m、n分别表示矩阵的行数列数，接下来m行，每行n个整数，每个整数代表一种颜色，表示游戏矩阵。
+【输出文件】
+输出文件共k行，第i行需输出颜色为i的最大矩阵的面积。
+【输入样例】
+3
+3 5
+1 2 2 3 2
+2 1 2 3 3
+1 2 1 3 3
+【输出样例】
+1
+2
+4
+【范围说明】
+对于30%的数据m,n<=100;
+对于100%的数据，m,n<=500;k<=10
+笔记本们的并联和串连
+(line.pas/c/cpp)
+ 
+【问题描述】
+YuMS的笔记本群要开始工作了，可是YuMS买的路由器巨垃圾，只能连出两条线，一条上面笔记本们串联，另一条上面笔记本们并联。这使他的笔记本只能像电路一样，笔记本与路由器不是星状排布，而是笔记本之间的线状连接。我们设想连接的时候串连的笔记本中每台笔记本们性能都将变为这条支路上性能最低的一台的性能；并联的几台笔记本中每台笔记本的性能变为他们性能的平均数除以2，并联路要求至少有两台笔记本；并联的电脑们性能不受串联路的影响，也就是说图一中Acer机与Hasee机相互制约，而与其他笔记本无关；并联的几台笔记本中每台笔记本的性能变为他们性能的平均数除以2，而与Acer、Hasee无关。为了使问题变得简单一些，我们规定类似电路的这个连接中
+1.         并联不能与并联串连；（图二）
+2.         并联中不能出现串连（图三、四）
+即如图一所示，而不会出现如图二、三、四所示的连接方式。YuMS还打算把加上还不如不加的电脑留下玩游戏，即他不一定用掉所有的笔记本。
+Acer
+Lenovo
+HP
+D—Link
+Tsinghuatongfang
+Hasee
+图一
+Acer
+Lenovo
+HP
+D—Link
+Hasee
+图二
+Tsinghuatongfang
+Founder
+Acer
+Lenovo
+HP
+D—Link
+Founder
+Hasee
+图三
+Acer
+Lenovo
+HP
+D—Link
+Founder
+图四
+ 
+ 
+YuMS没有精力再去编这程序了，否则他会累的生病，现在请您帮她作出设计方案，只要求输出最终笔记本群性能总和的最大值。
+【输入文件】
+输入文件第1行有一个整数n，表示共买了n台笔记本电脑。从第2行开始，每行有一个整数代表笔记本的性能。
+【输出文件】
+输出文件只包含一个实数（保留两位小数），表示你设计的方案中笔记本群的性能总和最大值。
+【输入样例】
+2
+5
+9
+【输出样例】
+10.00                  （5 9串联）
+【范围说明】
+对于30%的数据n<=5
+对于100%的数据，n<=20
+ 
+ 
+充分运用盗取的精简版war敌军情报
+(war.pas/c/cpp)
+【问题描述】
+这天YuMS又在厕所里玩游戏了，war超级精简版，其实就不是暴雪做的。这个游戏需要上网玩，具体规则是这样的：两个种族交战，他们站在一起，每人每天可以对军队发出一次指令。UD种族每一天只能有一个生物活动，其攻击力为无穷大，血量为A；NE种族每天所有的生物都可以活动，但是他们只能去打同一个人，他们的攻击力都为G（攻击力就是每次打的血量），如果所有生物只需其中一部分就可以干掉一个UD生物的话，其它生物也不回去打别的UD生物，而是闲着（换句话说就是NE每天最多杀死UD一个生物，而UD在序列成立的情况下每天一定杀死一个NE生物）。虽然看起来UD比NE强，但YuMS还是非常喜欢可爱的NE，他每次都选择NE进行对战。由于游戏比较烂，没有操作界面，作战之前双方需提交战斗序列。约定UD队伍有U0个生物，分别为U1-Uu0。NE队伍有N0个生物分别为分别为N1-NN0
+UD的战斗序列有n行，每行有两个整数i，j代表命令Ui攻击Nj。若Ui或Nj已死亡或本来就不存在，则命令无效。
+每天NE都先发起进攻。
+YuMS这个坏孩子竟然通过向别人电脑发木马的方法搞到了对方的命令序列。然后YuMS又犯懒了，他不想自己写命令序列，只想等你写完后把对方杀个大败。你能帮他吗？
+显然能，但命令序列不是唯一的，这导致YuMS检验你是否在骗他很麻烦。
+其实，YuMS自己可以想出来命令序列，只是想考考你他n天过去他可以最少死几个兵（不一定要杀掉别人最多的兵）。
+【输入文件】
+输入文件第1行有4个整数A、G、U0、N0。第2行有一个整数n
+下面n行是YuMS偷到的UD的命令序列。每行有两个整数i，j代表命令Ui攻击Nj。
+【输出文件】
+输出文件只包含一个整数，表示YuMS最少死的兵数。
+【输入样例1】
+50 20 10 5
+5
+1 1
+2 1
+3 3
+4 4
+1 5
+【输出样例1】
+0
+【输入样例2】
+101 20 10 5
+5
+1 1
+2 1
+3 3
+4 4
+1 5
+【输出样例2】
+2
+【范围说明】
+对于100%的数据U0,N0 <=10;
+A,G<=10000;
+n<=100000
+　
+标程源代码
+　
+请尊重他人知识产权，版权所有，不得随意复制、更改！
+choose.pas
+var i,j,max,ans,t,p:longint;
+ask:boolean;
+s:char;
+st:string;
+w:array[0..10001]of longint; {cost}
+v:array[0..10001]of longint; {value}
+f:array[0..10001]of longint;
+begin
+assign(input,'choose.in');reset(input);
+assign(output,'choose.out');rewrite(output);
+readln(t);
+if t=0 then ask:= false else ask:= true;
+readln(t);
+p:= 0;
+max:= 0;
+while (not eof)do begin
+read(s);
+case s of
+'s':
+begin
+read(s);read(s);read(s);
+inc(p);
+read(w[p]);
+read(v[p]);
+if ((max<v[p])and(w[p]<=t))then max:= v[p];
+end;
+'a':
+begin
+readln(st);
+writeln(max);
+end;
+'m':
+begin
+readln(st);
+fillchar(f,sizeof(f),255);
+f[0]:= 0;
+for i:=1 to p do begin
+for j:= t-w[i] downto 0 do
+if (f[j]>=0)and(f[j+w[i]]<f[j]+v[i]) then f[j+w[i]]:= f[j]+v[i];
+end;
+ans:= -1;
+for i:= 0 to t do if ans<f[i] then ans:= f[i];
+writeln(ans);
+end;
+end;
+end;
+close(input);
+close(output);
+end.
+
+
+fly.pas
+var k,m,n,i,j,l:integer;
+a:array[0..501,0..501]of integer;
+h:array[0..501,0..501]of integer;
+s:array[0..501,0..501]of integer;
+re:array[0..502]of integer;
+max,now:integer;
+function count(x,y,k:integer):integer;
+var i,min:integer;
+begin
+count:= s[x,y];
+min:= s[x,y];
+for i:= 2 to h[x,y] do begin
+if s[x,y+i-1]<min then min:= s[x,y+i-1];
+if count<min*i then count:= min*i;
+end;
+end;
+
+begin
+assign(input,'fly.in');reset(input);
+readln(l);
+readln(m,n);
+for i:= 1 to m do begin
+for j:= 1 to n do begin
+read(a[i,j]);
+end;
+readln;
+end;
+close(input);
+fillchar(re,sizeof(re),0);
+for k:= 1 to l do begin
+max:= 0;
+fillchar(h,sizeof(h),0);
+fillchar(s,sizeof(s),0);
+for i:= m downto 1 do begin
+for j:= n downto 1 do begin
+if a[i,j]=k then begin
+h[i,j]:= h[i,j+1]+1;
+s[i,j]:= s[i+1,j]+1;
+end;
+end;
+end;
+for i:=1 to m do begin
+for j:= 1 to n do begin
+if a[i,j]=k then begin
+now:=count(i,j,k);
+if now>max then max:= now;
+end;
+end;
+end;
+re[k]:= max;
+end;
+assign(output,'fly.out');rewrite(output);
+for i:= 1 to l do begin
+writeln(re[i]);
+end;
+close(output);
+end.
+　
+
+line.pas
+var a:array[0..20]of integer;
+c:array[0..20]of boolean;
+now:array[0..20]of integer;
+n,i:integer;
+re:real;
+procedure suan;
+var i,j,p,t,max:integer;
+bing:real;
+procedure qsort (c , d : integer);
+var i , j : integer; t : integer;
+begin
+i := (c + d) shr 1; t := now[i]; now[i] := now[c];
+i := c; j := d;
+while i < j do begin
+while (i < j) and (now[j] > t) do dec(j);
+if (i < j) then begin now[i] := now[j]; inc(i) end;
+while (i < j) and (now[i] < t) do inc(i);
+if (i < j) then begin now[j] := now[i]; dec(j) end;
+end;
+now[i] := t;
+if c + 1 < i then qsort (c , i - 1);
+if i + 1 < d then qsort (i + 1 , d);
+end;
+
+
+begin
+bing:= 0;
+t:= 0;
+for i:= 1 to n do begin
+if c[i] then begin
+bing:= bing+a[i];
+end;
+end;
+bing:= bing/2;
+p:= 0;
+for i:= 1 to n do begin
+if (not c[i]) then begin
+inc(p);
+now[p]:= a[i];
+end;
+end;
+qsort(1,p);
+max:= 0;
+for i:= 1 to p do begin
+t:= now[i]*(p-i+1);
+if t>max then max:= t;
+end;
+if max+bing>re then begin
+re:= max+bing;
+end;
+end;
+procedure make(x,last:integer);
+var i:integer;
+begin
+if last=0 then begin
+suan;
+exit;
+end;
+for i:= x+1 to n-last+1 do begin
+c[i]:= true;
+make(i,last-1);
+c[i]:= false;
+end;
+end;
+begin
+assign(input,'line.in');reset(input);
+readln(n);
+re:= 0;
+for i:= 1 to n do begin
+readln(a[i]);
+end;
+close(input);
+make(0,0);
+for i:= 2 to n do begin
+fillchar(c,sizeof(c),0);
+make(0,i);
+end;
+assign(output,'line.out');rewrite(output);
+writeln(re:0:2);
+close(output);
+end.
+　
+line.c
+此代码比命题人算法更优。作者：本站站长。
+#include<stdio.h>
+int main()
+{ int n,i,j,t,a[101];
+double tot=0,max=0;
+FILE *fp,*fp1;
+fp=fopen("line.in","r");
+fp1=fopen("line.out","w");
+fscanf(fp,"%d",&n);
+for(i=0;i<n;i++)
+fscanf(fp,"%d",&a[i]);
+for(i=0;i<n;i++)
+for(j=0;j<i;j++)
+if(a[i]<a[j])
+{ t=a[i];
+a[i]=a[j];
+a[j]=t;
+}
+max=a[0]*n;
+if(a[1]*(n-1)>max)
+max=a[1]*(n-1);
+tot=a[0]+a[n-1]*1.0/2.0;
+for(j=2;j<n-1;j++)
+if(a[j]*1.0/2.0>a[1])
+tot+=a[j]*1.0/2.0;
+else tot+=a[1];
+if(tot>max)
+max=tot; 
+for(i=2;i<=n;i++)
+{ tot=0;
+for(j=0;j<i;j++) 
+tot+=a[j]*1.0/2.0;
+for(j=i;j<n;j++)
+if(a[j]*1.0/2.0>a[i])
+tot+=a[j]*1.0/2.0;
+else tot+=a[i];
+if(tot>max)
+max=tot;
+} 
+fprintf(fp1,"%.2lf",max);
+fclose(fp);
+fclose(fp1);
+return 0;
+}
+
+
+war.pas
+注意：此源代码有错误，命题人正在修改中……
+type
+alive=array[1..10]of boolean;
+var a,g,u0,n0,n:longint;
+nalive:alive;
+ualive:alive;
+list:array[1..100000,1..2]of integer;
+i:longint;
+nlast,ulast:integer;
+min:integer;
+shown:alive;
+procedure search(p:longint;nalive,ualive:alive;nlast,ulast:integer);
+var i:longint;
+nalivep,ualivep:alive;
+nlastp,ulastp:integer;
+tmp:longint;
+function kill(i:longint;var p:longint;var nalive,ualive:alive;var nlast,ulast:integer):alive;
+var now:longint;
+fight:longint;
+begin
+now:= a;
+fight:= nlast*g;
+while (now>0)and(p<=n)and(nlast>0) do begin
+dec(now,fight);
+if now<=0 then ualive[i]:= false;
+if (ualive[list[p,1]] and nalive[list[p,2]]) then begin
+dec(nlast);
+nalive[list[p,2]]:=false;
+dec(fight,g);
+end;
+inc(p);
+end;
+kill:=nalive;
+end;
+begin
+if nlast<n0-min then exit;
+if ((nlast=0)or (ulast=0)or(p>n)) then begin
+if min>(n0-nlast) then min:= n0-nlast;
+exit;
+end;
+nalivep:= nalive;ualivep:= ualive;
+nlastp:= nlast;ulastp:= ulast;
+for i:= 1 to u0 do begin
+if ((shown[i])and(ualive[i])) then begin
+tmp:= p;
+kill(i,tmp,nalive,ualive,nlast,ulast);
+ulast:= ulast-1;
+search(tmp,nalive,ualive,nlast,ulast);
+ualive:=ualivep;
+nalive:= nalivep;
+ulast:= ulastp;
+nlast:= nlastp;
+end;
+end;
+end;
+
+
+begin
+assign(input,'war.in');reset(input);
+readln(a,g,u0,n0);
+readln(n);
+fillchar(shown,sizeof(shown),0);
+ulast:= 0;
+for i:= 1 to n do begin
+readln(list[i,1],list[i,2]);
+shown[list[i,1]]:= true;
+end;
+for i:= 1 to u0 do begin
+if shown[i] then inc(ulast);
+end;
+min:=maxint;
+nlast:= n0;
+fillchar(nalive,sizeof(alive),1);
+fillchar(ualive,sizeof(ualive),1);
+search(1,nalive,ualive,nlast,ulast);
+close(input);
+assign(output,'war.out');rewrite(output);
+writeln(min);
+close(output);
+end.
+
+　
+　
+
+　　
+Copyright （C） 2008 石家庄二中校友会 博杰学习网
+　
+
+　 
+　
+ 

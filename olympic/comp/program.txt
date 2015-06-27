@@ -1,0 +1,210 @@
+NOIP2008专题
+
+NOIP2008之初赛：试题 答案 成绩
+NOIP2008之复赛： 解题报告 标准程序 测试数据 河北成绩 全国复测成绩
+NOIP2008之体验：专题首页 竞赛不是无情物 告别信息学世界 回顾四年风雨 程序人生
+　
+　您的位置：博杰学习网>>学科竞赛>>信息学（内部资料，绝密）
+　NOIP2008标程
+代码来源：前三题石家庄一中郭子晨NOIP程序，第四题OIBH.
+尤其是第2、3题，代码短小精悍，算法优秀，值得学习。
+1、笨小猴  0.10s
+#include <iostream>
+using namespace std;
+int a[101],b[30];
+char s[111];
+int main(){
+freopen("word.in","r",stdin);
+freopen("word.out","w",stdout);
+memset(a,0,sizeof(a));
+a[0]=1; a[1]=1;
+for (int i=2;i<=100;i++){
+if (a[i]==0){
+for (int j=i*2;j<=100;j+=i) a[j]=1;
+}
+}
+scanf("%s",s);
+memset(b,0,sizeof(b));
+for (int i=0;s[i]!='\0';i++) b[s[i]-97]++;
+int maxn=0,minn=101;
+for (int i=0;i<26;i++){
+if (b[i]>maxn) maxn=b[i];
+if (b[i]>0&&b[i]<minn) minn=b[i];
+}
+if (a[maxn-minn]==0){
+printf("Lucky Word\n%d\n",maxn-minn);
+}
+else printf("No Answer\n0\n");
+return 0;
+}
+　
+2、火柴棒等式  0.14s
+#include <iostream>
+using namespace std;
+int a[10]={6,2,5,5,4,5,6,3,7,6},n,k[2000];
+int main(){
+freopen("matches.in","r",stdin);
+freopen("matches.out","w",stdout);
+memset(k,0,sizeof(k));
+k[0]=6;
+for (int i=1;i<2000;i++){
+for (int p=i;p>0;p/=10) k[i]+=a[p%10];
+}
+scanf("%d",&n); n-=4;
+int ans=0;
+for (int i=0;i<1000;i++)
+for (int j=0;j<1000;j++)
+if (k[i]+k[j]+k[i+j]==n) ans++;
+printf("%d\n",ans);
+return 0;
+}
+　
+3、传纸条  0.10s
+#include <iostream>
+using namespace std;
+int m,n,ma[52][52],d[100][52][52];
+int main(){
+freopen("message.in","r",stdin);
+freopen("message.out","w",stdout);
+cin>>m>>n;
+for (int i=1;i<=m;i++)
+for (int j=1;j<=n;j++)
+scanf("%d",&ma[i][j]);
+memset(d,0,sizeof(d));
+for (int i=3;i<m+n;i++){
+int l=(i-n)>1?(i-n):1,r=(i-1)<m?(i-1):m;
+for (int j=l;j<r;j++)
+for (int k=j+1;k<=r;k++){
+if (d[i-1][j-1][k-1]>d[i][j][k]) d[i][j][k]=d[i-1][j-1][k-1];
+if (d[i-1][j-1][k]>d[i][j][k]) d[i][j][k]=d[i-1][j-1][k];
+if (d[i-1][j][k-1]>d[i][j][k]) d[i][j][k]=d[i-1][j][k-1];
+if (d[i-1][j][k]>d[i][j][k]) d[i][j][k]=d[i-1][j][k];
+d[i][j][k]+=ma[j][i-j]+ma[k][i-k];
+}
+}
+printf("%d\n",d[m+n-1][m-1][m]);
+return 0;
+}
+　
+4、双栈排序  0.12s
+#include <iostream>
+
+using namespace std;
+
+const int nn = 1002, mm = nn * 2, inf = 1000000000;
+int n, tot, now;
+int a[nn], b[nn], head[nn], color[nn];
+int adj[mm], next[mm];
+int stack[3][nn];
+bool result;
+
+void addEdge(int x, int y) //加边
+{
+++ tot;
+adj[tot] = y;
+next[tot] = head[x];
+head[x] = tot;
+}
+
+bool dfs(int i) //DFS染色,检查图是否是二分图的经典算法 
+{
+int temp = head[i];
+while (temp) //邻接表,检查每一条边
+{
+if (! color[adj[temp]]) //如果与当前结点的结点还未染色
+{
+color[adj[temp]] = 3 - color[i]; //进行染色
+dfs(adj[temp]); //DFS
+}
+if (color[adj[temp]] == color[i]) return false;
+//如果两个相邻结点染色相同,说明此图不是二分图,返回无解
+temp = next[temp];
+}
+return true;
+}
+
+int main()
+{
+freopen("twostack.in", "r", stdin);
+freopen("twostack.out", "w", stdout);
+
+//输入
+scanf("%d", &n);
+for (int i = 1; i <= n; ++ i) scanf("%d", &a[i]);
+
+//预处理b数组
+b[n + 1] = inf;
+for (int i = n; i >= 1; -- i) b[i] = min(b[i + 1], a[i]); //"min" in STL
+
+//枚举数对(i,j)并加边 
+tot = 0;
+for (int i = 1; i <= n; ++ i)
+for (int j = i + 1; j <= n; ++ j)
+if (b[j + 1] < a[i] && a[i] < a[j])
+{
+addEdge(i, j);
+addEdge(j, i);
+}
+
+//DFS染色
+memset(color, 0, sizeof(color));
+result = true;
+for (int i = 1; i <= n; ++ i) //每次找当前未染色的编号最小的结点,并染颜色1
+if (! color[i]) //当前位置尚未被染色 
+{
+color[i] = 1;
+if (! dfs(i)) //染色时出现矛盾,此时图不是一个二分图,即无法分配到两个栈中
+{
+result = false; //记录无解
+break;
+}
+}
+
+if (! result) //无解
+printf("0");
+else //有解
+{
+//模拟求解
+now = 1;
+for (int i = 1; i <= n; ++ i)
+{
+//将当前数字压入对应的栈 
+if (color[i] == 1)
+printf("a ");
+else
+printf("c ");
+stack[color[i]][0] ++;
+stack[color[i]][stack[color[i]][0]] = a[i]; //this will work even if stack[1][0] = 0
+
+//循环检查,如果可以的话就从栈顶弹出元素
+while (stack[1][stack[1][0]] == now || stack[2][stack[2][0]] == now)
+{
+if (stack[1][stack[1][0]] == now)
+{
+printf("b ");
+stack[1][0] --;
+}
+else if (stack[2][stack[2][0]] == now)
+{
+printf("d ");
+stack[2][0] --;
+}
+now ++;
+}
+}
+}
+}
+　
+总用时：0.46s  得分：400分  绝对经典！
+NOIP2008总结
+　
+　
+　Copyright （C） 2008 石家庄二中校友会 博杰学习网
+
+d
+　 
+　
+ 
+　
+　
+　
